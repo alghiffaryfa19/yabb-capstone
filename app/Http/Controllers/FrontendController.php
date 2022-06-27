@@ -10,6 +10,30 @@ class FrontendController extends Controller
     public function statistik()
     {
 
+        // $json = file_get_contents(public_path('indonesia-prov.geojson'));
+
+        // // Decode the JSON file
+        // $json_data = json_decode($json,true);
+
+        // // Display data
+        // $data = [];
+        // foreach ($json_data['features'] as $item) {
+
+        //     $geometry = (object)array(
+        //         'type' => $item["geometry"]['type'],
+        //         'coordinates' => $item["geometry"]['coordinates'],
+        //     );
+
+        //     $data[] = ([
+        //         //'type' => $item['type'],
+        //         'provinsi' => $item["properties"]['Propinsi'],
+        //         //'geometry' => $geometry,
+        //         // 'koordinat' => $item["properties"]['Propinsi'],
+        //     ]);
+        // }
+
+        //return $data;
+
 
         return view('statistik');
         //return $a;
@@ -36,4 +60,6 @@ class FrontendController extends Controller
         $a = response()->json($data);
         return $a;
     }
+
+
 }

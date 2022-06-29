@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/statistik', [FrontendController::class, 'statistik']);
+
+Route::get('/home', function () { return view('home'); });

@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/statistik', [FrontendController::class, 'data'])->name('api_data');
+Route::get('/asean-rate', [FrontendController::class, 'asean'])->name('api_asean');

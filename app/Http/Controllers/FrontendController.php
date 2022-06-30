@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Child;
+use App\Models\Value;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class FrontendController extends Controller
 {
@@ -41,7 +43,7 @@ class FrontendController extends Controller
 
     public function data()
     {
-        $child = Child::with('value.year')->get();
+        $child = Child::with('value.year')->whereRelation('parents','id',1)->get();
         $data = [];
 
         foreach ($child as $item) {
@@ -54,6 +56,39 @@ class FrontendController extends Controller
             $data[] = ([
                 'name' => $item->name,
                 'data' => $dataPoints,
+            ]);
+        }
+
+        $a = response()->json($data);
+        return $a;
+    }
+
+    public function asean()
+    {
+        //$child = Child::with('value.year')->whereRelation('parents','id',1)->get();
+        $value = Value::whereRelation('children.parents','id',2)->get();
+        //return $value;
+        $data = [];
+
+        foreach ($value as $item) {
+
+            if ($item->main == 1) {
+                $vars = (object)array(
+                    'fill' => "#DC6967",
+                );
+            } else {
+                $vars = (object)array(
+                    'fill' => "#67B7DC",
+                );
+            }
+
+
+
+            $data[] = ([
+                'country' => $item->title,
+                'visits' => $item->value,
+                'icon' => "https://www.amcharts.com/wp-content/uploads/flags/".Str::slug($item->title).".svg",
+                'columnSettings' => $vars,
             ]);
         }
 

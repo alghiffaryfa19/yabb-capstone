@@ -21,6 +21,13 @@
 		}
 	</style>
 
+<style>
+    #chartdiv {
+      width: 100%;
+      height: 500px;
+    }
+    </style>
+
 	<style>#map { width: 100%; height: 500px; }
 .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
 .legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }</style>
@@ -29,6 +36,7 @@
     <div class="container">
         <div id="containesr" style="height: 370px; width: 100%;"></div>
         <div id='map'></div>
+        <div id="chartdiv"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
@@ -36,6 +44,11 @@
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
     <script type="text/javascript" src="{{asset('indo.js')}}"></script>
+
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
 
 <script type="text/javascript">
 
@@ -230,6 +243,112 @@ $(document).ready(function () {
 
 });
 
+        </script>
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url : '{{route('api_asean')}}',
+                    type : 'GET',
+                    dataType : 'JSON',
+                    success : function(response) {
+                        var Data = new Array();
+
+                        response.forEach(function(data){
+                            Data.push(data)
+                        });
+
+                        am5.ready(function() {
+
+                        // Create root element
+                        // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+                        var root = am5.Root.new("chartdiv");
+
+
+                        // Set themes
+                        // https://www.amcharts.com/docs/v5/concepts/themes/
+                        root.setThemes([
+                        am5themes_Animated.new(root)
+                        ]);
+
+
+                        // Create chart
+                        // https://www.amcharts.com/docs/v5/charts/xy-chart/
+                        var chart = root.container.children.push(am5xy.XYChart.new(root, {
+                        panX: false,
+                        panY: false,
+                        wheelX: "panX",
+                        wheelY: "zoomX",
+                        layout: root.verticalLayout
+                        }));
+
+
+                        // Data
+                        var colors = chart.get("colors");
+
+                        var data = Data;
+
+
+                        // Create axes
+                        // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+                        var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+                        categoryField: "country",
+                        renderer: am5xy.AxisRendererX.new(root, {
+                            minGridDistance: 30
+                        }),
+                        bullet: function (root, axis, dataItem) {
+                            return am5xy.AxisBullet.new(root, {
+                            location: 0.5,
+                            sprite: am5.Picture.new(root, {
+                                width: 24,
+                                height: 24,
+                                centerY: am5.p50,
+                                centerX: am5.p50,
+                                src: dataItem.dataContext.icon
+                            })
+                            });
+                        }
+                        }));
+
+                        xAxis.get("renderer").labels.template.setAll({
+                        paddingTop: 20
+                        });
+
+                        xAxis.data.setAll(data);
+
+                        var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+                        renderer: am5xy.AxisRendererY.new(root, {})
+                        }));
+
+
+                        // Add series
+                        // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+                        var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+                        xAxis: xAxis,
+                        yAxis: yAxis,
+                        valueYField: "visits",
+                        categoryXField: "country"
+                        }));
+
+                        series.columns.template.setAll({
+                        tooltipText: "{categoryX}: {valueY}",
+                        tooltipY: 0,
+                        strokeOpacity: 0,
+                        templateField: "columnSettings"
+                        });
+
+                        series.data.setAll(data);
+
+
+                        // Make stuff animate on load
+                        // https://www.amcharts.com/docs/v5/concepts/animations/
+                        series.appear();
+                        chart.appear(1000, 100);
+
+                        }); // end am5.ready()
+
+                    }
+                });
+            });
         </script>
 </body>
 </html>

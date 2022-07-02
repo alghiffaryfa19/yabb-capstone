@@ -20,4 +20,9 @@ class Value extends Model
     {
         return $this->belongsTo(\App\Models\Year::class, 'year_id','id');
     }
+
+    public function province()
+    {
+        return $this->belongsTo(\App\Models\Province::class, 'province_id','id');
+    }
 }

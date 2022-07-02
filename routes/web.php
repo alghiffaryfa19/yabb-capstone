@@ -16,8 +16,29 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('landing');
 
-Route::get('/statistik', [FrontendController::class, 'statistik']);
+Route::get('/statistics', [FrontendController::class, 'statistik'])->name('statistik');
+Route::get('/resources', function () {
+    return view('resources');
+})->name('resources');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+Route::prefix('insights')->group(function () {
+    Route::get('/digital-literacy', function () {
+        return view('insights.dl');
+    })->name('dl');
+
+    Route::get('/importance-literacy', function () {
+        return view('insights.importance');
+    })->name('importance');
+
+    Route::get('/problem', function () {
+        return view('insights.problem');
+    })->name('problem');
+});
 
 Route::get('/home', function () { return view('home'); });

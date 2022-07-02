@@ -1,87 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-	<title>Eduport - LMS, Education and Course Theme</title>
-
-	<!-- Meta Tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="Webestica.com">
-	<meta name="description" content="Eduport- LMS, Education and Course Theme">
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
-
-	<!-- Google Font -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
-
-	<!-- Plugins CSS -->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/font-awesome/css/all.min.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/tiny-slider/tiny-slider.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/glightbox/css/glightbox.css') }}">
-
-	<!-- Theme CSS -->
-	<link id="style-switch" rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
-
-</head>
-
-<body>
-
-<!-- Header START -->
-<header class="navbar-light navbar-sticky">
-	<!-- Logo Nav START -->
-	<nav class="navbar navbar-expand-lg">
-		<div class="container">
-			<!-- Logo START -->
-			<a class="navbar-brand" href="index.html">
-				<img class="light-mode-item navbar-brand-item" src="https://images.squarespace-cdn.com/content/v1/5ff2836796a9ec7fa14134c6/1611500942070-7W25T48OQ3H0W63RUQYI/Digital+Literacy+logo-blue.png" alt="logo">
-				<img class="dark-mode-item navbar-brand-item" src="https://images.squarespace-cdn.com/content/v1/5ff2836796a9ec7fa14134c6/1611500942070-7W25T48OQ3H0W63RUQYI/Digital+Literacy+logo-blue.png" alt="logo">
-			</a>
-			<!-- Logo END -->
-
-			<!-- Responsive navbar toggler -->
-			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-animation">
-					<span></span>
-					<span></span>
-					<span></span>
-				</span>
-			</button>
-
-			<!-- Main navbar START -->
-			<div class="navbar-collapse collapse" id="navbarCollapse">
-
-				<!-- Nav Search END -->
-				<ul class="navbar-nav navbar-nav-scroll mx-auto">
-
-					
-
-					<!-- Nav item 3 Pages -->
-					<!-- <li class="nav-item dropdown"><a class="nav-link" href="#">Course</a></li> -->
-
-					<!-- Nav item 4 link-->
-					<!-- <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li> -->
-				</ul>
-			</div>
-			<!-- Main navbar END -->
-			<div class="navbar-nav ms-2">
-				<button class="btn btn-sm btn-dark mb-0"><i class="bi bi-power me-2"></i>Contact Us</button>
-			</div>
-
-		</div>
-	</nav>
-	<!-- Logo Nav END -->
-</header>
-<!-- Header END -->
-
-<!-- **************** MAIN CONTENT START **************** -->
-<main>
-	
-<!-- =======================
-Main Banner START -->
+@extends('layouts.index')
+@section('title','Home')
+@section('content')
 <section class="position-relative overflow-hidden pt-5 pt-lg-3">
 	<!-- SVG START -->
 	<figure class="position-absolute top-50 start-0 translate-middle-y ms-n7 d-none d-xxl-block">
@@ -228,10 +147,10 @@ Main Banner START -->
 						<!-- SVG END -->
 					</span>
 				</h1>
-				
+
 				<!-- Content -->
 				<p class="my-4 lead">Today, the use of digital media is very ubiquitous across every level of society. The spread of hoaxes in the community is highly concerning. Therefore, digital skill plays a very crucial role as a way to improve the knowledge of younger generation in being more aware as well as having the ability to use digital media wisely with ethique. It can also increase individual's ability to think critically and can grasp information understanding even better, including control over various literacy information, alongside with individual's verbal abilities, as well as digital literacy itself which can improve individual's focus.</p>
-				
+
 				<!-- Info -->
 				<ul class="list-inline position-relative justify-content-center justify-content-lg-start mb-4">
 					<li class="list-inline-item me-2"> <i class="bi bi-patch-check-fill h6 me-1"></i>Reduces the spread of hoaxes</li>
@@ -268,7 +187,7 @@ Main Banner START -->
 						<path class="fill-body" d="M60.971,0.000 L-0.000,0.000 C-0.000,0.000 80.068,266.854 184.934,294.154 C184.934,294.154 568.841,306.828 588.786,286.150 C588.786,286.150 698.888,112.106 684.750,0.000 L611.777,0.000 C611.777,0.000 569.027,161.864 505.816,209.110 C505.816,209.110 394.427,296.341 195.930,203.102 C195.930,203.102 66.072,143.180 60.971,0.000 Z"/>
 					</svg>
 				</figure>
-				
+
 				<!-- SVG decoration -->
 				<figure class="position-absolute top-50 start-50 translate-middle mt-n7">
 					<svg class="fill-warning">
@@ -289,7 +208,7 @@ Main Banner START -->
 					</svg>
 				</figure>
 				<!-- Icon logos START -->
-				
+
 				<!-- Icon logos END -->
 
 				<!-- Congratulations message -->
@@ -305,8 +224,8 @@ Main Banner START -->
 					</div>
 				</div>
 
-				<!-- Active student --> 
-				
+				<!-- Active student -->
+
 				<!-- Image -->
 				<div class="position-relative">
 					<img src="{{ asset('assets/images/illustrations/digital_literacy.svg') }}" alt="">
@@ -493,7 +412,7 @@ Action box START -->
 			</svg>
 		</figure>
 		<!-- SVG decoration END -->
-		
+
 		<div class="row">
 			<div class="col-12">
 				<div class="bg-info p-4 p-sm-5 rounded-3">
@@ -532,8 +451,8 @@ Reviews START -->
 <section class="bg-light">
 	<div class="container">
 		<div class="row g-4 g-lg-5 align-items-center">
-			
-			
+
+
 
 			<div class="col-xl-12 order-1 text-center text-xl-start">
 				<!-- Title -->
@@ -575,7 +494,7 @@ Award and Team START -->
 					<h2 class="mb-0">Meet Our Team</h2>
 					<!-- <a href="#" class="btn btn-light mt-2">Join Team</a> -->
 				</div>
-				
+
 				<!-- Slider START -->
 				<div class="tiny-slider arrow-round arrow-creative arrow-blur arrow-hover mt-2 mt-sm-5">
 					<div class="tiny-slider-inner" data-autoplay="true" data-arrow="true" data-dots="false" data-items="5" data-items-lg="5" data-items-md="5">
@@ -675,74 +594,11 @@ Award and Team START -->
 							</ul> -->
 						</div>
 					</div>
-				</div>	
+				</div>
 				<!-- Slider END -->
 			</div>
 			<!-- Our team END -->
 		</div>
 	</div>
 </section>
-<!-- =======================
-Award and Team END -->
-
-</main>
-<!-- **************** MAIN CONTENT END **************** -->
-
-<!-- =======================
-Footer START -->
-<footer class="pt-5">
-	<div class="container">
-
-		<!-- Divider -->
-		<hr class="mt-4 mb-0">
-
-		<!-- Bottom footer -->
-		<div class="py-3">
-			<div class="container px-0">
-				<div class="d-md-flex justify-content-between align-items-center py-3 text-center text-md-left">
-					<!-- copyright text -->
-					<div class="text-primary-hover"> Copyrights <a href="#" class="text-body">©2022 DAED8</a>. All rights reserved. </div>
-					<!-- copyright links-->
-					<div class=" mt-3 mt-md-0">
-						<ul class="list-inline mb-0">
-							<li class="list-inline-item">
-								<!-- Language selector -->
-								<div class="dropup mt-0 text-center text-sm-end">
-									<a class="dropdown-toggle nav-link" href="#" role="button" id="languageSwitcher" data-bs-toggle="dropdown" aria-expanded="false">
-										<i class="fas fa-globe me-2"></i>Language
-									</a>
-									<ul class="dropdown-menu min-w-auto" aria-labelledby="languageSwitcher">
-										<li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/uk.svg" alt="">English</a></li>
-										<li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/gr.svg" alt="">German </a></li>
-										<li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/sp.svg" alt="">French</a></li>
-									</ul>
-								</div>
-							</li>
-							<li class="list-inline-item"><a class="nav-link" href="#">Terms of use</a></li>
-							<li class="list-inline-item"><a class="nav-link pe-0" href="#">Privacy policy</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-<!-- =======================
-Footer END -->
-
-<!-- Back to top -->
-<div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
-
-<!-- Bootstrap JS -->
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Vendors -->
-<script src="assets/vendor/tiny-slider/tiny-slider.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.js"></script>
-<script src="assets/vendor/purecounterjs/dist/purecounter_vanilla.js"></script>
-
-<!-- Template Functions -->
-<script src="assets/js/functions.js"></script>
-
-</body>
-</html>
+@endsection

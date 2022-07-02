@@ -1,55 +1,408 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="{{asset('superadmin/js/jquery.min.js')}}"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <style>
-		html, body {
-			height: 100%;
-			margin: 0;
-		}
-		.leaflet-container {
-			height: 400px;
-			width: 600px;
-			max-width: 100%;
-			max-height: 100%;
-		}
-	</style>
+@extends('layouts.index')
+@section('title','Visualization and Analysis')
 
-<style>
-    #chartdiv {
-      width: 100%;
-      height: 500px;
-    }
-    </style>
+@section('content')
+<section class="bg-light position-relative">
 
-	<style>#map { width: 100%; height: 500px; }
-.info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
-.legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }</style>
-</head>
-<body>
+	<!-- Svg decoration -->
+	<figure class="position-absolute bottom-0 start-0 d-none d-lg-block">
+		<svg width="822.2px" height="301.9px" viewBox="0 0 822.2 301.9">
+			<path class="fill-warning opacity-5" d="M752.5,51.9c-4.5,3.9-8.9,7.8-13.4,11.8c-51.5,45.3-104.8,92.2-171.7,101.4c-39.9,5.5-80.2-3.4-119.2-12.1 c-32.3-7.2-65.6-14.6-98.9-13.9c-66.5,1.3-128.9,35.2-175.7,64.6c-11.9,7.5-23.9,15.3-35.5,22.8c-40.5,26.4-82.5,53.8-128.4,70.7 c-2.1,0.8-4.2,1.5-6.2,2.2L0,301.9c3.3-1.1,6.7-2.3,10.2-3.5c46.1-17,88.1-44.4,128.7-70.9c11.6-7.6,23.6-15.4,35.4-22.8 c46.7-29.3,108.9-63.1,175.1-64.4c33.1-0.6,66.4,6.8,98.6,13.9c39.1,8.7,79.6,17.7,119.7,12.1C634.8,157,688.3,110,740,64.6 c4.5-3.9,9-7.9,13.4-11.8C773.8,35,797,16.4,822.2,1l-0.7-1C796.2,15.4,773,34,752.5,51.9z"></path>
+		</svg>
+	</figure>
+
+	<div class="container position-relative">
+		<div class="row">
+			<div class="col-12">
+				<div class="row align-items-center">
+
+					<!-- Image -->
+					<div class="col-6 col-md-3 text-center order-1">
+						<img src="{{asset('assets/images/element/category-1.svg')}}" alt="">
+					</div>
+
+					<!-- Content -->
+					<div class="col-md-6 px-md-5 text-center position-relative order-md-2 mb-5 mb-md-0">
+
+						<!-- Svg decoration -->
+						<figure class="position-absolute top-0 start-0">
+							<svg width="22px" height="22px" viewBox="0 0 22 22">
+								<polygon class="fill-orange" points="22,8.3 13.7,8.3 13.7,0 8.3,0 8.3,8.3 0,8.3 0,13.7 8.3,13.7 8.3,22 13.7,22 13.7,13.7 22,13.7 "></polygon>
+							</svg>
+						</figure>
+
+						<!-- Svg decoration -->
+						<figure class="position-absolute top-0 start-50 translate-middle mt-n6 d-none d-md-block">
+							<svg width="27px" height="27px">
+								<path class="fill-purple" d="M13.122,5.946 L17.679,-0.001 L17.404,7.528 L24.661,5.946 L19.683,11.533 L26.244,15.056 L18.891,16.089 L21.686,23.068 L15.400,19.062 L13.122,26.232 L10.843,19.062 L4.557,23.068 L7.352,16.089 L-0.000,15.056 L6.561,11.533 L1.582,5.946 L8.839,7.528 L8.565,-0.001 L13.122,5.946 Z"></path>
+							</svg>
+						</figure>
+
+
+						<!-- Title -->
+						<h1 class="mb-3">Visualization and Analysis</h1>
+						<p class="mb-3">Check out our Visualization and Analysis</p>
+
+						<!-- Search -->
+
+					</div>
+
+					<!-- Image -->
+					<div class="col-6 col-md-3 text-center order-3">
+						<img src="{{asset('assets/images/element/category-2.svg')}}" alt="">
+					</div>
+
+				</div> <!-- Row END -->
+			</div>
+		</div> <!-- Row END -->
+	</div>
+</section>
+<section>
     <div class="container">
-        <div id="containesr" style="height: 370px; width: 100%;"></div>
-        <div id='map'></div>
-        <div id="chartdiv"></div>
+        <div>
+            <h3>Where is Indonesia's position in the ASEAN region regarding literacy rate?</h3>
+            <div id="chartdiv"></div>
+            <div class="mt-3">
+                <p>Sourced from <a href="https://www.worldatlas.com/">https://www.worldatlas.com/</a> In 2020, Indonesia ranks 7th out of 11 ASEAN countries regarding the Literacy Rate 😱</p>
+            </div>
+        </div>
+
+        <div>
+            <h3>How is the literacy rate in Indonesia based on age?</h3>
+            <div id="containesr" style="height: 500px; width: 100%;"></div>
+            <div class="mt-3">
+                <p>Sourced from <a href="https://www.statista.com/">https://www.statista.com/</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+
+        <div>
+            <h3>Digital Literacy Index in Indonesia</h3>
+            <div id="stack" style="height: 500px"></div>
+            <div class="mt-3">
+                <p>Sourced from <a href="#">https://www.lorem.com/</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+
+        <div>
+            <h3>Literacy Rate in Indonesia in the form of Geospatial data</h3>
+            <div id="map"></div>
+            <div class="mt-3">
+                <p>Sourced from <a href="#">https://www.lorem.com/</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+
+        <div>
+            <h3>Percentage of Households Owning Cell Phones by Province, 2017—2020</h3>
+            <div>
+                <select class="form-control" id="childd">
+                    <option>Please Choose The Control</option>
+                    @foreach ($child as $item)
+
+                    <option value="{{$item->id}}">{{$item->name}}</option>
+                    @endforeach
+                </select>
+
+            </div>
+            <div id="cellphone_container" style="height: 500px"></div>
+            <div class="mt-3">
+                <p>Sourced from <a href="#">https://www.lorem.com/</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+
+        <div>
+            <h3>Percentage of Households that Have Accessed the Internet in the Last 3 Months by Province and Regional Classification</h3>
+            <div>
+                <select class="form-control" id="childdd">
+                    <option>Please Choose The Control</option>
+                    @foreach ($child_2 as $item)
+
+                    <option value="{{$item->id}}">{{$item->name}}</option>
+                    @endforeach
+                </select>
+
+            </div>
+            <div id="internet_container" style="height: 500px"></div>
+            <div class="mt-3">
+                <p>Sourced from <a href="#">https://www.lorem.com/</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+
+        <div>
+            <h3>Correlation between the percentage of not attending school and the percentage of literacy rate</h3>
+            <div id="piramida" style="height: 700px"></div>
+            <div class="mt-3">
+                <p>Sourced from <a href="#">https://www.lorem.com/</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+
+        <div>
+            <a href="{{route('resources')}}" class="btn btn-primary">Check All Our Resources</a>
+        </div>
+
+
+
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
-    <script type="text/javascript" src="{{asset('indo.js')}}"></script>
 
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+</section>
+@endsection
+@section('script')
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url : '{{route('api_asean')}}',
+            type : 'GET',
+            dataType : 'JSON',
+            success : function(response) {
+                var Data = new Array();
+
+                response.forEach(function(data){
+                    Data.push(data)
+                });
+
+                am5.ready(function() {
+
+                // Create root element
+                // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+                var root = am5.Root.new("chartdiv");
 
 
+                // Set themes
+                // https://www.amcharts.com/docs/v5/concepts/themes/
+                root.setThemes([
+                am5themes_Animated.new(root)
+                ]);
+
+
+                // Create chart
+                // https://www.amcharts.com/docs/v5/charts/xy-chart/
+                var chart = root.container.children.push(am5xy.XYChart.new(root, {
+                panX: false,
+                panY: false,
+                wheelX: "panX",
+                wheelY: "zoomX",
+                layout: root.verticalLayout
+                }));
+
+
+                // Data
+                var colors = chart.get("colors");
+
+                var data = Data;
+
+
+                // Create axes
+                // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+                var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+                categoryField: "country",
+                renderer: am5xy.AxisRendererX.new(root, {
+                    minGridDistance: 30
+                }),
+                bullet: function (root, axis, dataItem) {
+                    return am5xy.AxisBullet.new(root, {
+                    location: 0.5,
+                    sprite: am5.Picture.new(root, {
+                        width: 24,
+                        height: 24,
+                        centerY: am5.p50,
+                        centerX: am5.p50,
+                        src: dataItem.dataContext.icon
+                    })
+                    });
+                }
+                }));
+
+                xAxis.get("renderer").labels.template.setAll({
+                paddingTop: 20
+                });
+
+                xAxis.data.setAll(data);
+
+                var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+                renderer: am5xy.AxisRendererY.new(root, {})
+                }));
+
+
+                // Add series
+                // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+                var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+                xAxis: xAxis,
+                yAxis: yAxis,
+                valueYField: "visits",
+                categoryXField: "country"
+                }));
+
+                series.columns.template.setAll({
+                tooltipText: "{categoryX}: {valueY}",
+                tooltipY: 0,
+                strokeOpacity: 0,
+                templateField: "columnSettings"
+                });
+
+                series.data.setAll(data);
+
+
+                // Make stuff animate on load
+                // https://www.amcharts.com/docs/v5/concepts/animations/
+                series.appear();
+                chart.appear(1000, 100);
+
+                }); // end am5.ready()
+
+            }
+        });
+    });
+</script>
+<script>
+
+
+    $(document).ready(function () {
+        $.ajax({
+            url : '{{route('api_data')}}',
+            type : 'GET',
+            dataType : 'JSON',
+            success : function(response) {
+
+                var Data = new Array();
+
+                response.forEach(function(data){
+                    Data.push(data)
+                });
+
+                Highcharts.chart('containesr', {
+
+                title: {
+                    text: 'Literacy rate in Indonesia 2012-2021, by age group'
+                },
+
+                subtitle: {
+                    text: 'Source: statista.com'
+                },
+
+                yAxis: {
+                    title: {
+                        text: '%'
+                    }
+                },
+
+                xAxis: {
+                    accessibility: {
+                        rangeDescription: 'Range: 2012 to 2021cc'
+                    }
+                },
+
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle'
+                },
+
+                plotOptions: {
+                    series: {
+                        label: {
+                            connectorAllowed: false
+                        },
+                        pointStart: 2012
+                    }
+                },
+
+                series: Data,
+
+                responsive: {
+                    rules: [{
+                        condition: {
+                            maxWidth: 500
+                        },
+                        chartOptions: {
+                            legend: {
+                                layout: 'horizontal',
+                                align: 'center',
+                                verticalAlign: 'bottom'
+                            }
+                        }
+                    }]
+                }
+
+                });
+            }
+        });
+
+    });
+
+            </script>
+            <script>
+                $(document).ready(function () {
+                    $.ajax({
+                        url : '{{route('wkwk')}}',
+                        type : 'GET',
+                        dataType : 'JSON',
+                        success : function(response) {
+                            var Data = new Array();
+
+                            response.data.forEach(function(data){
+                                Data.push(data)
+                            });
+
+
+                            Highcharts.chart('stack', {
+                                chart: {
+                                    type: 'column'
+                                },
+                                title: {
+                                    text: 'Digital Literacy Index in Indonesia 2020'
+                                },
+                                xAxis: {
+                                    categories: response.pro
+                                },
+                                yAxis: {
+                                    min: 0,
+                                    title: {
+                                        text: 'Score'
+                                    },
+                                    stackLabels: {
+                                        enabled: true,
+                                        style: {
+                                            fontWeight: 'bold',
+                                            color: ( // theme
+                                                Highcharts.defaultOptions.title.style &&
+                                                Highcharts.defaultOptions.title.style.color
+                                            ) || 'gray'
+                                        }
+                                    }
+                                },
+                                legend: {
+                                    align: 'right',
+                                    x: -30,
+                                    verticalAlign: 'top',
+                                    y: 25,
+                                    floating: true,
+                                    backgroundColor:
+                                        Highcharts.defaultOptions.legend.backgroundColor || 'white',
+                                    borderColor: '#CCC',
+                                    borderWidth: 1,
+                                    shadow: false
+                                },
+                                tooltip: {
+                                    headerFormat: '<b>{point.x}</b><br/>',
+                                    pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+                                },
+                                plotOptions: {
+                                    column: {
+                                        stacking: 'normal',
+                                        dataLabels: {
+                                            enabled: true
+                                        }
+                                    }
+                                },
+                                series: Data
+                            });
+
+
+
+
+                        }
+                    });
+                });
+            </script>
 <script type="text/javascript">
 
 	var map = L.map('map').setView([-1.8123877831094566, 120.2139471273533], 5);
@@ -167,188 +520,235 @@
 	legend.addTo(map);
 
 </script>
-    <script>
+<script>
+    $(document).ready(function () {
 
+        $('#childd').on('change', function() {
+        var selValue = document.getElementById("childd").value;
+        var e = document.getElementById("childd");
+        var texte = e.options[e.selectedIndex].text;
+        var url = "{{ route('tes123', ":id") }}";
+        url = url.replace(':id', selValue);
 
-$(document).ready(function () {
-    $.ajax({
-        url : '{{route('api_data')}}',
+        $.ajax({
+        url : url,
         type : 'GET',
         dataType : 'JSON',
         success : function(response) {
 
             var Data = new Array();
 
-            response.forEach(function(data){
+            response.data.forEach(function(data){
                 Data.push(data)
             });
 
-            Highcharts.chart('containesr', {
-
-            title: {
-                text: 'Literacy rate in Indonesia 2012-2021, by age group'
-            },
-
-            subtitle: {
-                text: 'Source: statista.com'
-            },
-
-            yAxis: {
+            Highcharts.chart('cellphone_container', {
+                chart: {
+                    type: 'column'
+                },
                 title: {
-                    text: '%'
-                }
-            },
-
-            xAxis: {
-                accessibility: {
-                    rangeDescription: 'Range: 2012 to 2021cc'
-                }
-            },
-
-            legend: {
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'middle'
-            },
-
-            plotOptions: {
-                series: {
-                    label: {
-                        connectorAllowed: false
-                    },
-                    pointStart: 2012
-                }
-            },
-
-            series: Data,
-
-            responsive: {
-                rules: [{
-                    condition: {
-                        maxWidth: 500
-                    },
-                    chartOptions: {
-                        legend: {
-                            layout: 'horizontal',
-                            align: 'center',
-                            verticalAlign: 'bottom'
-                        }
+                    text: 'Percentage of Households Owning Cell Phones by Province, 2017—2020'
+                },
+                subtitle: {
+                    text: 'Source: #'
+                },
+                xAxis: {
+                    categories: response.pro,
+                    crosshair: true
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: '%'
                     }
-                }]
-            }
-
+                },
+                tooltip: {
+                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                        '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
+                    footerFormat: '</table>',
+                    shared: true,
+                    useHTML: true
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                series: Data
             });
-        }
+
+
+            }
+                })
+        });
+
+
+
     });
 
-});
-
-        </script>
-        <script>
-            $(document).ready(function () {
-                $.ajax({
-                    url : '{{route('api_asean')}}',
-                    type : 'GET',
-                    dataType : 'JSON',
-                    success : function(response) {
-                        var Data = new Array();
-
-                        response.forEach(function(data){
-                            Data.push(data)
-                        });
-
-                        am5.ready(function() {
-
-                        // Create root element
-                        // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-                        var root = am5.Root.new("chartdiv");
 
 
-                        // Set themes
-                        // https://www.amcharts.com/docs/v5/concepts/themes/
-                        root.setThemes([
-                        am5themes_Animated.new(root)
-                        ]);
+</script>
+<script>
+    $(document).ready(function () {
 
+        $('#childdd').on('change', function() {
+        var selValue = document.getElementById("childdd").value;
+        var e = document.getElementById("childdd");
+        var texte = e.options[e.selectedIndex].text;
+        var url = "{{ route('tes456', ":id") }}";
+        url = url.replace(':id', selValue);
 
-                        // Create chart
-                        // https://www.amcharts.com/docs/v5/charts/xy-chart/
-                        var chart = root.container.children.push(am5xy.XYChart.new(root, {
-                        panX: false,
-                        panY: false,
-                        wheelX: "panX",
-                        wheelY: "zoomX",
-                        layout: root.verticalLayout
-                        }));
+        $.ajax({
+        url : url,
+        type : 'GET',
+        dataType : 'JSON',
+        success : function(response) {
 
+            var Data = new Array();
 
-                        // Data
-                        var colors = chart.get("colors");
-
-                        var data = Data;
-
-
-                        // Create axes
-                        // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-                        var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-                        categoryField: "country",
-                        renderer: am5xy.AxisRendererX.new(root, {
-                            minGridDistance: 30
-                        }),
-                        bullet: function (root, axis, dataItem) {
-                            return am5xy.AxisBullet.new(root, {
-                            location: 0.5,
-                            sprite: am5.Picture.new(root, {
-                                width: 24,
-                                height: 24,
-                                centerY: am5.p50,
-                                centerX: am5.p50,
-                                src: dataItem.dataContext.icon
-                            })
-                            });
-                        }
-                        }));
-
-                        xAxis.get("renderer").labels.template.setAll({
-                        paddingTop: 20
-                        });
-
-                        xAxis.data.setAll(data);
-
-                        var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-                        renderer: am5xy.AxisRendererY.new(root, {})
-                        }));
-
-
-                        // Add series
-                        // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-                        var series = chart.series.push(am5xy.ColumnSeries.new(root, {
-                        xAxis: xAxis,
-                        yAxis: yAxis,
-                        valueYField: "visits",
-                        categoryXField: "country"
-                        }));
-
-                        series.columns.template.setAll({
-                        tooltipText: "{categoryX}: {valueY}",
-                        tooltipY: 0,
-                        strokeOpacity: 0,
-                        templateField: "columnSettings"
-                        });
-
-                        series.data.setAll(data);
-
-
-                        // Make stuff animate on load
-                        // https://www.amcharts.com/docs/v5/concepts/animations/
-                        series.appear();
-                        chart.appear(1000, 100);
-
-                        }); // end am5.ready()
-
-                    }
-                });
+            response.data.forEach(function(data){
+                Data.push(data)
             });
-        </script>
-</body>
-</html>
+
+            Highcharts.chart('internet_container', {
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'Percentage of Households that Have Accessed the Internet in the Last 3 Months by Province and Regional Classification'
+                },
+                subtitle: {
+                    text: 'Source: #'
+                },
+                xAxis: {
+                    categories: response.pro,
+                    crosshair: true
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: '%'
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                        '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
+                    footerFormat: '</table>',
+                    shared: true,
+                    useHTML: true
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                series: Data
+            });
+
+
+            }
+                })
+        });
+
+
+
+    });
+
+
+
+</script>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url : '{{route('tes789')}}',
+            type : 'GET',
+            dataType : 'JSON',
+            success : function(response) {
+                var Data = new Array();
+
+                response.data.forEach(function(data){
+                    Data.push(data)
+                });
+
+                var categories = response.pro;
+
+                Highcharts.chart('piramida', {
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: 'Correlation between the percentage of not attending school and the percentage of literacy rate'
+                    },
+                    subtitle: {
+                        text: '-'
+                    },
+                    accessibility: {
+                        point: {
+                            valueDescriptionFormat: '{index} {xDescription}, {value}%.'
+                        }
+                    },
+                    xAxis: [{
+                        categories: categories,
+                        reversed: false,
+                        labels: {
+                            step: 1
+                        },
+                        accessibility: {
+                            description: 'Age (male)'
+                        }
+                    }, { // mirror axis on right side
+                        opposite: true,
+                        reversed: false,
+                        categories: categories,
+                        linkedTo: 0,
+                        labels: {
+                            step: 1
+                        },
+                        accessibility: {
+                            description: 'Age (female)'
+                        }
+                    }],
+                    yAxis: {
+                        title: {
+                            text: null
+                        },
+                        labels: {
+                            formatter: function () {
+                                return Math.abs(this.value) + '%';
+                            }
+                        },
+                        accessibility: {
+                            description: 'Percentage population',
+                            rangeDescription: 'Range: 0 to 5%'
+                        }
+                    },
+
+                    plotOptions: {
+                        series: {
+                            stacking: 'normal'
+                        }
+                    },
+
+                    tooltip: {
+                        formatter: function () {
+                            return '<b>' + this.series.name + ' ' + this.point.category + '</b><br/>' +
+                                'Percentage: ' + Highcharts.numberFormat(Math.abs(this.point.y), 1) + '%';
+                        }
+                    },
+
+                    series: Data
+                });
+
+
+
+
+            }
+        });
+    });
+</script>
+@endsection

@@ -19,9 +19,19 @@ Route::get('/', function () {
 })->name('landing');
 
 Route::get('/statistics', [FrontendController::class, 'statistik'])->name('statistik');
+
 Route::get('/resources', function () {
     return view('resources');
 })->name('resources');
+
+
+Route::get('/descriptive-statistics', function () {
+    return view('descriptive');
+})->name('descriptive');
+
+Route::get('/presentations', function () {
+    return view('presentasi');
+})->name('presentasi');
 
 Route::get('/about', function () {
     return view('about');

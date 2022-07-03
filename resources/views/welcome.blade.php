@@ -537,8 +537,17 @@ Action box START -->
 							<div class="row align-items-center">
 								<!-- Title -->
 								<div class="col-lg-12">
-									<h3 class="text-white">Our Hypothesis is Fulfilled! (under main tenis)</h3>
-									<p class="text-white mb-3 mb-lg-0">Based on the numbers it can be concluded that internet availability and mobile phone access have huge impact on digital literacy rate, as well as the older a person is, the higher the digital literacy rate</p>
+									<h3 class="text-white">Our Hypothesis is Fulfilled!</h3>
+									<p class="text-white mb-3 mb-lg-0">
+                                        <ul class="text-white">
+                                            <li>
+                                                The hypothesis used to test whether the variables Having a mobile phone, Internet availability, Literacy rate, Literacy rate(AMH), not attend school, Communication skills, Technology capability, Information and data literacy, Critical thinking, Ethics in using technology, Knowledge of data security personally, and Device security knowledge affect the digital literacy index
+                                            </li>
+                                            <li>
+                                                After the analysis, the results show that the variables Communication skills, Technology capability, Information and data literacy, Critical thinking, Ethics in using technology, Knowledge of data security personally, and Device security knowledge affect the digital literacy index.
+                                            </li>
+                                        </ul>
+                                    </p>
 								</div>
 								<!-- Content and input -->
 								<div class="col-lg-5 text-lg-end">
@@ -568,19 +577,19 @@ Reviews START -->
 				<h2 class="fs-1">How to maintain and increase digital literacy by 0.54% in people aged 50+ in the face of the Society 5.0 era over the next three years?</h2>
 				<ul>
 					<li>
-						<p>Digital literacy at the age level 50+ is lower than other age ranges, however from 2015-2021 it has an average literacy increase of 0.54% (positive rate direction)</p>
+						<p><strong>S</strong> : The average of the seven pillars of the Indonesian digital literacy index is 3.49. 15 provinces in Indonesia have an average index of 7 pillars of digital literacy, namely Banten, East Java, Lampung, Papua, West Java, West Sulawesi, West Papua, Bangka Belitung, Jambi, North Sulawesi, South Sumatra, East Kalimantan, Bali. , South Kalimantan and Bengkulu.</p>
 					</li>
 					<li>
-						<p>Increase in digital literacy at age 50+ >= 0,54%</p>
+						<p><strong>M</strong> : Increase the index of 7 pillars of digital literacy >= 3.49.</p>
 					</li>
 					<li>
-						<p>In the Society 5.0 era, people were introduced to more advanced information and communication technology</p>
+						<p><strong>A</strong> : The government and the general public fully support efforts to increase digital literacy, such as adding Internet facilities at the Village/Lurah Office every year.</p>
 					</li>
 					<li>
-						<p>Digital literacy is needed by all ages of society, especially in the era of Society 5.0</p>
+						<p><strong>R</strong> : The measurement of national digital literacy is carried out by calculating it into a digital literacy index and is measured from the 7 pillars.</p>
 					</li>
 					<li>
-						<p>In the next 3 years</p>
+						<p><strong>T</strong> : Within three years</p>
 					</li>
 				</ul>
 				<!-- <a href="#" class="btn btn-primary mb-0">View Reviews</a> -->

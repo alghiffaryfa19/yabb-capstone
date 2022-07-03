@@ -446,4 +446,59 @@
 		</div>
 	</div>
 </section>
+<section class="pt-4 pt-lg-5">
+	<div class="container">
+		<!-- Category START -->
+		<div class="row g-4">
+			<!-- Category item -->
+
+            <div class="row">
+                <div class="col-lg-8 mb-4">
+                    <h2 class="mb-0">This Project is <span class="text-warning">Dedicated</span> to :</h2>
+                </div>
+            </div>
+
+			<!-- Category item -->
+			<div class="col-sm-6 col-lg-4 col-xl-3">
+				<div class="card card-body shadow h-100">
+					<!-- Title and image -->
+					<div class="d-flex align-items-center m-auto">
+						<img src="{{asset('km.png')}}" class="h-60px mb-2" alt="">
+
+					</div>
+					<!-- List -->
+				</div>
+			</div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+				<div class="card card-body shadow h-100">
+					<!-- Title and image -->
+					<div class="d-flex align-items-center m-auto">
+						<img src="{{asset('msib.png')}}" class="h-60px mb-2" alt="">
+
+					</div>
+					<!-- List -->
+				</div>
+			</div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+				<div class="card card-body shadow h-100">
+					<!-- Title and image -->
+					<div class="d-flex align-items-center m-auto">
+						<img src="{{asset('yabb.png')}}" class="h-60px mb-2" alt="">
+					</div>
+					<!-- List -->
+				</div>
+			</div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+				<div class="card card-body shadow h-100">
+					<!-- Title and image -->
+					<div class="d-flex align-items-center m-auto">
+                        <img src="{{asset('gengigih-logo.png')}}" class="h-60px mb-2" alt="">
+					</div>
+					<!-- List -->
+				</div>
+			</div>
+		</div>
+		<!-- Category END -->
+	</div>
+</section>
 @endsection

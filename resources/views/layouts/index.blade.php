@@ -157,7 +157,7 @@ Footer END -->
 <script src="{{asset('assets/vendor/purecounterjs/dist/purecounter_vanilla.js')}}"></script>
 
 <!-- Template Functions -->
-<script src="{{asset('assets/js/functions.js')}}"></script>
+<script src="{{asset('assets/js/functions.js?v=1')}}"></script>
 
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>

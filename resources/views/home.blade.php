@@ -447,40 +447,99 @@ Action box START -->
 Action box END -->
 
 <!-- =======================
-Reviews START -->
+Popular course START -->
 <section class="bg-light">
 	<div class="container">
-		<div class="row g-4 g-lg-5 align-items-center">
-
-
-
-			<div class="col-xl-12 order-1 text-center text-xl-start">
-				<!-- Title -->
-				<h2 class="fs-1">How to maintain and increase digital literacy by 0.54% in people aged 50+ in the face of the Society 5.0 era over the next three years?</h2>
-				<ul>
-					<li>
-						<p>Digital literacy at the age level 50+ is lower than other age ranges, however from 2015-2021 it has an average literacy increase of 0.54% (positive rate direction)</p>
-					</li>
-					<li>
-						<p>Increase in digital literacy at age 50+ >= 0,54%</p>
-					</li>
-					<li>
-						<p>In the Society 5.0 era, people were introduced to more advanced information and communication technology</p>
-					</li>
-					<li>
-						<p>Digital literacy is needed by all ages of society, especially in the era of Society 5.0</p>
-					</li>
-					<li>
-						<p>In the next 3 years</p>
-					</li>
-				</ul>
-				<!-- <a href="#" class="btn btn-primary mb-0">View Reviews</a> -->
+		<!-- Title -->
+		<div class="row mb-4">
+			<div class="col-lg-8 mx-auto text-center">
+				<h2 class="fs-1">SMART Problem Statement</h2>
+				<p class="mb-0 lead">How to maintain and increase digital literacy by 0.54% in people aged 50+ in the face of the Society 5.0 era over the next three years?</p>
 			</div>
-		</div> <!-- Row END -->
+		</div>
+
+		<!-- Tabs START -->
+		<ul class="nav nav-pills nav-pills-bg-soft justify-content-sm-center mb-4 px-3" id="course-pills-tab" role="tablist">
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0 active" id="course-pills-tab-1" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-1" type="button" role="tab" aria-controls="course-pills-tabs-1" aria-selected="false">Situation</button>
+			</li>
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0" id="course-pills-tab-2" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-2" type="button" role="tab" aria-controls="course-pills-tabs-2"	aria-selected="false">Measurable</button>
+			</li>
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0" id="course-pills-tab-3" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-3" type="button" role="tab" aria-controls="course-pills-tabs-3" aria-selected="false">Achievable</button>
+			</li>
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0" id="course-pills-tab-4" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-4" type="button" role="tab" aria-controls="course-pills-tabs-4" aria-selected="false">Relevant</button>
+			</li>
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0" id="course-pills-tab-5" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-5" type="button" role="tab" aria-controls="course-pills-tabs-5"	aria-selected="false">Timebound</button>
+			</li>
+		</ul>
+		<!-- Tabs END -->
+
+		<!-- Tabs content START -->
+		<div class="tab-content" id="course-pills-tabContent">
+			<!-- Content START -->
+			<div class="tab-pane fade show active" id="course-pills-tabs-1" role="tabpanel" aria-labelledby="course-pills-tab-1">
+				<div class="row g-4">
+					<p class="my-4 lead text-center">
+						Digital literacy at the age level 50+ is lower than other age ranges, however from 2015-2021 it has an average literacy increase of 0.54% (positive rate direction)
+					</p>
+				</div> <!-- Row END -->
+			</div>
+			<!-- Content END -->
+
+			<!-- Content START -->
+			<div class="tab-pane fade" id="course-pills-tabs-2" role="tabpanel" aria-labelledby="course-pills-tab-2">
+				<div class="row g-4">
+					<p class="my-4 lead text-center">
+						Increase in digital literacy at age 50+ >= 0,54%
+					</p>
+				</div>
+			</div>
+			<!-- Content END -->
+
+			<!-- Content START -->
+			<div class="tab-pane fade" id="course-pills-tabs-3" role="tabpanel" aria-labelledby="course-pills-tab-3">
+				<div class="row g-4">
+					<p class="my-4 lead text-center">
+						In the Society 5.0 era, people were introduced to more advanced information and communication technology
+					</p>
+				</div>
+			</div>
+			<!-- Content END -->
+
+			<!-- Content START -->
+			<div class="tab-pane fade" id="course-pills-tabs-4" role="tabpanel" aria-labelledby="course-pills-tab-4">
+				<div class="row g-4">
+					<p class="my-4 lead text-center">
+						Digital literacy is needed by all ages of society, especially in the era of Society 5.0
+					</p>
+				</div>
+			</div>
+			<!-- Content END -->
+
+			<!-- Content START -->
+			<div class="tab-pane fade" id="course-pills-tabs-5" role="tabpanel" aria-labelledby="course-pills-tab-5">
+				<div class="row g-4">
+					<p class="my-4 lead text-center">
+						In the next 3 years
+					</p>
+				</div>
+			</div>
+			<!-- Content END -->
+		</div>
+		<!-- Tabs content END -->
 	</div>
 </section>
 <!-- =======================
-Reviews END -->
+Popular course END -->
 
 <!-- =======================
 Award and Team START -->

@@ -569,39 +569,97 @@ Action box START -->
 <!-- =======================
 Action box END -->
 
-<!-- =======================
-Reviews START -->
 <section class="bg-light">
 	<div class="container">
-		<div class="row g-4 g-lg-5 align-items-center">
-
-
-
-			<div class="col-xl-12 order-1 text-center text-xl-start">
-				<!-- Title -->
-				<h2 class="fs-1">How to increase the index of the seven pillars of digital literacy in 15 provinces below the average Indonesian digital literacy index of 3.49 in three years?</h2>
-				<ul>
-					<li>
-						<p><strong>S</strong> : The average of the seven pillars of the Indonesian digital literacy index is 3.49. 15 provinces in Indonesia have an average index of 7 pillars of digital literacy, namely Banten, East Java, Lampung, Papua, West Java, West Sulawesi, West Papua, Bangka Belitung, Jambi, North Sulawesi, South Sumatra, East Kalimantan, Bali. , South Kalimantan and Bengkulu.</p>
-					</li>
-					<li>
-						<p><strong>M</strong> : Increase the index of 7 pillars of digital literacy >= 3.49.</p>
-					</li>
-					<li>
-						<p><strong>A</strong> : The government and the general public fully support efforts to increase digital literacy, such as adding Internet facilities at the Village/Lurah Office every year.</p>
-					</li>
-					<li>
-						<p><strong>R</strong> : The measurement of national digital literacy is carried out by calculating it into a digital literacy index and is measured from the 7 pillars.</p>
-					</li>
-					<li>
-						<p><strong>T</strong> : Within three years</p>
-					</li>
-				</ul>
-				<!-- <a href="#" class="btn btn-primary mb-0">View Reviews</a> -->
+		<!-- Title -->
+		<div class="row mb-4">
+			<div class="col-lg-8 mx-auto text-center">
+				<h2 class="fs-1">SMART Problem Statement</h2>
+				<p class="mb-0 lead">How to increase the index of the seven pillars of digital literacy in 15 provinces below the average Indonesian digital literacy index of 3.49 in three years?</p>
 			</div>
-		</div> <!-- Row END -->
+		</div>
+
+		<!-- Tabs START -->
+		<ul class="nav nav-pills nav-pills-bg-soft justify-content-sm-center mb-4 px-3" id="course-pills-tab" role="tablist">
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0 active" id="course-pills-tab-1" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-s" type="button" role="tab" aria-controls="course-pills-tabs-s" aria-selected="false">Situation</button>
+			</li>
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0" id="course-pills-tab-2" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-m" type="button" role="tab" aria-controls="course-pills-tabs-m"	aria-selected="false">Measurable</button>
+			</li>
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0" id="course-pills-tab-3" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-a" type="button" role="tab" aria-controls="course-pills-tabs-a" aria-selected="false">Achievable</button>
+			</li>
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0" id="course-pills-tab-4" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-r" type="button" role="tab" aria-controls="course-pills-tabs-r" aria-selected="false">Relevant</button>
+			</li>
+			<!-- Tab item -->
+			<li class="nav-item me-2 me-sm-5">
+				<button class="nav-link mb-2 mb-md-0" id="course-pills-tab-5" data-bs-toggle="pill" data-bs-target="#course-pills-tabs-t" type="button" role="tab" aria-controls="course-pills-tabs-t"	aria-selected="false">Timebound</button>
+			</li>
+		</ul>
+		<!-- Tabs END -->
+
+		<!-- Tabs content START -->
+		<div class="tab-content" id="course-pills-tabContent">
+			<!-- Content START -->
+			<div class="tab-pane fade show active" id="course-pills-tabs-s" role="tabpanel" aria-labelledby="course-pills-tab-s">
+				<div class="row g-4">
+					<p class="my-4 lead text-center">
+						The average of the seven pillars of the Indonesian digital literacy index is 3.49. 15 provinces in Indonesia have an average index of 7 pillars of digital literacy, namely Banten, East Java, Lampung, Papua, West Java, West Sulawesi, West Papua, Bangka Belitung, Jambi, North Sulawesi, South Sumatra, East Kalimantan, Bali. , South Kalimantan and Bengkulu.
+					</p>
+				</div> <!-- Row END -->
+			</div>
+			<!-- Content END -->
+
+			<!-- Content START -->
+			<div class="tab-pane fade" id="course-pills-tabs-m" role="tabpanel" aria-labelledby="course-pills-tab-m">
+				<div class="row g-4">
+					<p class="my-4 lead text-center">
+						Increase the index of 7 pillars of digital literacy >= 3.49.
+					</p>
+				</div>
+			</div>
+			<!-- Content END -->
+
+			<!-- Content START -->
+			<div class="tab-pane fade" id="course-pills-tabs-a" role="tabpanel" aria-labelledby="course-pills-tab-a">
+				<div class="row g-4">
+					<p class="my-4 lead text-center">
+						The government and the general public fully support efforts to increase digital literacy, such as adding Internet facilities at the Village/Lurah Office every year.
+					</p>
+				</div>
+			</div>
+			<!-- Content END -->
+
+			<!-- Content START -->
+			<div class="tab-pane fade" id="course-pills-tabs-r" role="tabpanel" aria-labelledby="course-pills-tab-r">
+				<div class="row g-4">
+					<p class="my-4 lead text-center">
+						The measurement of national digital literacy is carried out by calculating it into a digital literacy index and is measured from the 7 pillars.
+					</p>
+				</div>
+			</div>
+			<!-- Content END -->
+
+			<!-- Content START -->
+			<div class="tab-pane fade" id="course-pills-tabs-t" role="tabpanel" aria-labelledby="course-pills-tab-t">
+				<div class="row g-4">
+					<p class="my-4 lead text-center">
+						Within three years
+					</p>
+				</div>
+			</div>
+			<!-- Content END -->
+		</div>
+		<!-- Tabs content END -->
 	</div>
 </section>
+
 <section>
 	<div class="container">
 		<div class="row">

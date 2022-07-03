@@ -63,7 +63,8 @@
             <h3>Where is Indonesia's position in the ASEAN region regarding literacy rate?</h3>
             <div id="chartdiv"></div>
             <div class="mt-3">
-                <p>Sourced from <a href="https://www.worldatlas.com/">https://www.worldatlas.com/</a> In 2020, Indonesia ranks 7th out of 11 ASEAN countries regarding the Literacy Rate 😱</p>
+                <p>Quoted from <a href="https://www.worldatlas.com/">World Atlas</a>, in 2020 Indonesia's literacy rate is ranked 7th out of ASEAN countries, which is 93%. The ASEAN countries with the highest literacy were occupied by Singapore, Thailand, and Brunei Darussalam at 96%, followed by the Philippines at 95% and Vietnam at 94%.
+                </p>
             </div>
         </div>
 
@@ -71,7 +72,7 @@
             <h3>How is the literacy rate in Indonesia based on age?</h3>
             <div id="containesr" style="height: 500px; width: 100%;"></div>
             <div class="mt-3">
-                <p>Sourced from <a href="https://www.statista.com/">https://www.statista.com/</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Sourced from <a href="https://www.statista.com/">Statista</a> Based on age, the literacy rate in Indonesia has increased, especially in the 50+ age range, which has consistently grown from 2015 to 2021 by 0.54%. There is a very stable age range for the literacy level, namely the age range of 15-19 years at 100%.</p>
             </div>
         </div>
 
@@ -79,7 +80,7 @@
             <h3>Digital Literacy Index in Indonesia</h3>
             <div id="stack" style="height: 500px"></div>
             <div class="mt-3">
-                <p>Sourced from <a href="#">https://www.lorem.com/</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Sourced from <a href="https://aptika.kominfo.go.id/wp-content/uploads/2020/11/Survei-Literasi-Digital-Indonesia-2020.pdf">Katadata Insight Center</a> The measurement of national digital literacy is carried out by calculating it into a digital literacy index from the seven agreed pillars. These pillars are used to measure knowledge of the ability to use technology, knowledge of personal security, critical thinking skills, knowledge of device security, information and data literacy, communication skills, and ethics in using technology. The province with the highest technological capability pillar is Central Sulawesi Province, with an index of 4.55. Then the highest Communication Ability pillar in Central Sulawesi Province was 4.38, Information and data literacy pillar in Maluku Province was 3.87, Critical Thinking pillar in Riau Islands Province was 3.73, Ethics pillar in Maluku Province was 3.87, Personal Data Security pillar in Central Sulawesi Province was 3. 4.12, and the Device Security pillar in Central Sulawesi Province at 4.63. Maluku Province has the highest number of literacy indexes in 2020 at 52.53.</p>
             </div>
         </div>
 
@@ -87,7 +88,7 @@
             <h3>Literacy Rate in Indonesia in the form of Geospatial data</h3>
             <div id="map"></div>
             <div class="mt-3">
-                <p>Sourced from <a href="#">https://www.lorem.com/</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Sourced from <a href="https://www.statista.com/statistics/1259413/indonesia-literacy-rate-of-population-above-15-years-old-by-province/">Statista</a> Based on geographical location, the literacy rate in Indonesia is less in remote areas or small islands that are not noticed by the government, this could be due to the lack of existing facilities. Judging from the existing data, Papua is at the lowest level of literacy, which is 0-78%, and Sulawesi is at the highest level, which is 100%.</p>
             </div>
         </div>
 
@@ -105,7 +106,7 @@
             </div>
             <div id="cellphone_container" style="height: 500px"></div>
             <div class="mt-3">
-                <p>Sourced from <a href="#">https://www.lorem.com/</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Sourced from <a href="https://www.bps.go.id/indicator/2/1691/2/rata-rata-banyaknya-anggota-rumah-tangga-yang-memiliki-menguasai-telepon-selular-dari-rumah-tangga-yang-memiliki-menguasai-telepon-selular-menurut-provinsi-dan-klasifikasi-daerah.html">Badan Pusat Statistik</a> Percentage of Households Owning Cellular Phones According to the province above, it can be seen that in rural areas in 2017-2020 the highest percentage was in the Riau Islands province 98.3%-92.8% while the lowest was in Papua 51.9%-47.1%, in urban areas the percentage was Households owning a cellular phone are in North Kalimantan, 97.1%-98.8% and the lowest in Papua 46.0%-95.0%. And in rural + urban the province that has the highest percentage is North Kalimantan 96.6%-98.0% and the lowest is Papua Province 50.4%-60.0%.</p>
             </div>
         </div>
 
@@ -123,7 +124,7 @@
             </div>
             <div id="internet_container" style="height: 500px"></div>
             <div class="mt-3">
-                <p>Sourced from <a href="#">https://www.lorem.com/</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Sourced from <a href="https://www.bps.go.id/indicator/2/398/2/persentase-rumah-tangga-yang-pernah-mengakses-internet-dalam-3-bulan-terakhir-menurut-provinsi-dan-klasifikasi-daerah.html">Badan Pusat Statistik</a> Percentage of Households Accessing the Internet in the Last 3 Years According to the classification of provinces and regions, in urban areas, DKI Jakarta province has the highest rank, namely 89.0%-93.2% and West Nusa Tenggara Province has the lowest percentage, which is 61.8%- 77.0%, while in rural areas, East Kalimantan province has the highest rank of 66.2%-77.5% and Papua Province is at the lowest level of 14.7%-18.2%. If combined between rural and urban areas, the highest level of internet access is DKI Jakarta Province with a percentage of 89.0%-93.2% and Papua Province having the lowest percentage of 29.5%-35.3%.</p>
             </div>
         </div>
 
@@ -131,7 +132,7 @@
             <h3>Correlation between the percentage of not attending school and the percentage of literacy rate</h3>
             <div id="piramida" style="height: 700px"></div>
             <div class="mt-3">
-                <p>Sourced from <a href="#">https://www.lorem.com/</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Sourced from <a href="https://www.bps.go.id/publication/2020/11/27/347c85541c34e7dae54395a3/statistik-pendidikan-2020.html">Badan Pusat Statistik</a> There is a correlation between the number who are not in school and the literacy rate (AMH), where the higher the number who attends the higher the literacy rate (AMH)</p>
             </div>
         </div>
 
@@ -671,78 +672,72 @@
             success : function(response) {
                 var Data = new Array();
 
-                response.data.forEach(function(data){
+                response.forEach(function(data){
                     Data.push(data)
                 });
 
-                var categories = response.pro;
 
                 Highcharts.chart('piramida', {
-                    chart: {
-                        type: 'bar'
-                    },
+                chart: {
+                    type: 'scatter',
+                    zoomType: 'xy'
+                },
+                title: {
+                    text: 'Correlation between the percentage of not attending school and the percentage of literacy rate'
+                },
+                subtitle: {
+                    text: ''
+                },
+                xAxis: {
                     title: {
-                        text: 'Correlation between the percentage of not attending school and the percentage of literacy rate'
+                        enabled: true,
+                        text: 'Persentase Angka Melek Huruf'
                     },
-                    subtitle: {
-                        text: '-'
-                    },
-                    accessibility: {
-                        point: {
-                            valueDescriptionFormat: '{index} {xDescription}, {value}%.'
-                        }
-                    },
-                    xAxis: [{
-                        categories: categories,
-                        reversed: false,
-                        labels: {
-                            step: 1
-                        },
-                        accessibility: {
-                            description: 'Age (male)'
-                        }
-                    }, { // mirror axis on right side
-                        opposite: true,
-                        reversed: false,
-                        categories: categories,
-                        linkedTo: 0,
-                        labels: {
-                            step: 1
-                        },
-                        accessibility: {
-                            description: 'Age (female)'
-                        }
-                    }],
-                    yAxis: {
-                        title: {
-                            text: null
-                        },
-                        labels: {
-                            formatter: function () {
-                                return Math.abs(this.value) + '%';
+                    startOnTick: true,
+                    endOnTick: true,
+                    showLastLabel: true
+                },
+                yAxis: {
+                    title: {
+                        text: 'Persentase Tidak Bersekolah'
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'left',
+                    verticalAlign: 'top',
+                    x: 100,
+                    y: 70,
+                    floating: false,
+                    backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
+                    borderWidth: 1
+                },
+                plotOptions: {
+                    scatter: {
+                        marker: {
+                            radius: 5,
+                            states: {
+                                hover: {
+                                    enabled: true,
+                                    lineColor: 'rgb(100,100,100)'
+                                }
                             }
                         },
-                        accessibility: {
-                            description: 'Percentage population',
-                            rangeDescription: 'Range: 0 to 5%'
+                        states: {
+                            hover: {
+                                marker: {
+                                    enabled: false
+                                }
+                            }
+                        },
+                        tooltip: {
+                            headerFormat: '<b>{series.name}</b><br>',
+                            pointFormat: '{point.x} %, {point.y} %'
                         }
-                    },
-
-                    plotOptions: {
-                        series: {
-                            stacking: 'normal'
-                        }
-                    },
-
-                    tooltip: {
-                        formatter: function () {
-                            return '<b>' + this.series.name + ' ' + this.point.category + '</b><br/>' +
-                                'Percentage: ' + Highcharts.numberFormat(Math.abs(this.point.y), 1) + '%';
-                        }
-                    },
-
-                    series: Data
-                });
+                    }
+                },
+                series: Data
+            });
 
 
 

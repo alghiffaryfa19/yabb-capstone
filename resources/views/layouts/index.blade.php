@@ -87,7 +87,14 @@
 
 					<!-- Nav item 3 Pages -->
 					<li class="nav-item dropdown"><a class="nav-link" href="{{route('landing')}}">Home</a></li>
-                    <li class="nav-item dropdown"><a class="nav-link" href="{{route('statistik')}}">Analysis</a></li>
+                    <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Analysis</a>
+						<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li> <a class="dropdown-item" href="{{route('statistik')}}">Visualization & Analysis</a></li>
+							<li> <a class="dropdown-item" href="{{route('descriptive')}}">Descriptive Statistics</a></li>
+                            <li> <a class="dropdown-item" href="{{route('presentasi')}}">Presentations</a></li>
+						</ul>
+					</li>
                     <li class="nav-item dropdown"><a class="nav-link" href="{{route('resources')}}">Resources</a></li>
                     <li class="nav-item dropdown"><a class="nav-link" href="{{route('about')}}">About Us</a></li>
 
@@ -125,7 +132,7 @@ Footer START -->
 			<div class="container px-0">
 				<div class="d-md-flex justify-content-between align-items-center py-3 text-center text-md-left">
 					<!-- copyright text -->
-					<div class="text-primary-hover"> Copyrights <a href="#" class="text-body">©2022 DAED8</a>. All rights reserved. </div>
+					<div class="text-primary-hover"> Made with Love <a href="#" class="text-body">by DAED8</a></div>
 					<!-- copyright links-->
 					<div class=" mt-3 mt-md-0">
 

@@ -214,19 +214,34 @@ class FrontendController extends Controller
     public function tes789()
     {
         $province = Province::all();
+
         $data = [];
         foreach ($province as $item) {
+
+            $b = [];
+            $val = Value::whereIn('children_id',[16,17])->where('year_id',9)->where('province_id',$item->id)->with('children','province')->get();
+            foreach ($val as $pr) {
+                array_push($b,$pr->value);
+            }
+
+            $c = [];
+            array_push($c,$b);
+
             $data[] = ([
                 'name' => $item->name,
-                'color' => $b,
+                'color' => sprintf("#%06x",rand(0,16777215)),
+                'data' => $c,
             ]);
         }
 
 
 
 
-        $val = Value::whereIn('children_id',[16,17])->where('year_id',9)->with('children','province')->get();
-        return $val;
+
+
+        $a = response()->json($data);
+
+        return $a;
     }
 
     public function wkwk()
